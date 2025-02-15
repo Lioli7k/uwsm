@@ -17,7 +17,7 @@ PKG_DATA_DIR = join_paths(
   get_option('datadir'),
   meson.project_name(),
 )
-PKG_PYTHON_MODULES_DIR = join_paths(PKG_DATA_DIR, 'modules')
+PKG_PYTHON_MODULES_DIR = PYTHON_PROG.get_install_dir(subdir: meson.project_name())
 PKG_DOC_DIR = get_option('docdir')
 if PKG_DOC_DIR == ''
   PKG_DOC_DIR = join_paths(

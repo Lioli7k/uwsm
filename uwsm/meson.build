@@ -98,7 +98,7 @@ uwsm_sources = [
   params_file,
 ]
 
-install_data(
+PYTHON_PROG.install_sources(
   uwsm_sources,
-  install_dir: PKG_PYTHON_MODULES_DIR / 'uwsm',
+  subdir: meson.project_name(),
 )
